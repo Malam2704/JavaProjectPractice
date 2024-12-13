@@ -10,16 +10,15 @@ public class GuessMyNumber {
 
         System.out.println("Enter a number from 1-100: ");
         int userInt = myScanner.nextInt();
-        System.out.println("User's number is " + userInt);
 
         int tries = 1;
         while (true) {
             if (userInt > systemRandomNumber) {
-                System.out.println("Your guessed number is greater, try again: ");
+                System.out.println("Real number is lower, try again: ");
                 userInt = myScanner.nextInt();
                 tries++;
             } else if (userInt < systemRandomNumber) {
-                System.out.println("Your guessed number is lower, try again: ");
+                System.out.println("Real number is higher, try again: ");
                 userInt = myScanner.nextInt();
                 tries++;
             } else if (userInt == systemRandomNumber) {
